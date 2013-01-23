@@ -14,7 +14,7 @@ public class EPWORTH extends javax.swing.JFrame {
      * Creates new form EPWORTH
      */
     //<editor-fold defaultstate="collapsed" desc="ATUALIZA O VALOR DA ESCALA EPWORTH">   
-    public void atualizaEPW(int valor, int indice){
+    private void atualizaEPW(int valor, int indice){
        EPWorth[indice] = valor;
        EPWfinal = 0;
        
@@ -289,82 +289,113 @@ public class EPWORTH extends javax.swing.JFrame {
     private void TFvendoTVFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TFvendoTVFocusLost
         try {
             int numero = Integer.parseInt(TFvendoTV.getText());
-        if(!VerificaEntrada(numero)){
-            JOptionPane.showMessageDialog(this, "Entrada inválida, O número deve estar entre 0 e 3!");
-        }
-        else{
-            atualizaEPW(numero, 0);
+            if(!VerificaEntrada(numero)){
+                JOptionPane.showMessageDialog(this, "Entrada inválida, O número deve estar entre 0 e 3!");
+               }
+            else{
+                atualizaEPW(numero, 0);
         }
         
         } catch (NumberFormatException e) {
-            System.out.println("bugouououuoouououououoououoououououooououououo");
+            JOptionPane.showMessageDialog(this, "Entrada inválida!");
         }
 
     }//GEN-LAST:event_TFvendoTVFocusLost
 
     private void TFSitLendoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TFSitLendoFocusLost
-        int numero = Integer.parseInt(TFSitLendo.getText());
-        if(!VerificaEntrada(numero)){
-            JOptionPane.showMessageDialog(this, "Entrada inválida, O número deve estar entre 0 e 3!");
+        try {
+            int numero = Integer.parseInt(TFSitLendo.getText());
+            if(!VerificaEntrada(numero)){
+                JOptionPane.showMessageDialog(this, "Entrada inválida, O número deve estar entre 0 e 3!");
+               }
+            else{
+                atualizaEPW(numero, 1);
+             }
         }
-        else{
-            atualizaEPW(numero, 1);
+        catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Entrada inválida!");
         }
     }//GEN-LAST:event_TFSitLendoFocusLost
 
     private void TFSentadoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TFSentadoFocusLost
-        int numero = Integer.parseInt(TFSentado.getText());
-        if(!VerificaEntrada(numero)){
-            JOptionPane.showMessageDialog(this, "Entrada inválida, O número deve estar entre 0 e 3!");
+        try {
+            int numero = Integer.parseInt(TFSentado.getText());
+            if(!VerificaEntrada(numero)){
+                JOptionPane.showMessageDialog(this, "Entrada inválida, O número deve estar entre 0 e 3!");
+               }
+            else{
+                atualizaEPW(numero, 2);
+            }
         }
-        else{
-            atualizaEPW(numero, 2);
+        catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Entrada inválida!");
         }
     }//GEN-LAST:event_TFSentadoFocusLost
 
     private void TFDirigindoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TFDirigindoFocusLost
-        int numero = Integer.parseInt(TFDirigindo.getText());
-        if(!VerificaEntrada(numero)){
-            JOptionPane.showMessageDialog(this, "Entrada inválida, O número deve estar entre 0 e 3!");
-        }
-        else{
-            atualizaEPW(numero, 3);
+        try {
+            int numero = Integer.parseInt(TFDirigindo.getText());
+            if(!VerificaEntrada(numero)){
+                JOptionPane.showMessageDialog(this, "Entrada inválida, O número deve estar entre 0 e 3!");
+               }
+            else{
+                atualizaEPW(numero, 3);
+            }
+        } 
+        catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Entrada inválida!");
         }
     }//GEN-LAST:event_TFDirigindoFocusLost
 
     private void TFTransitoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TFTransitoFocusLost
-        int numero = Integer.parseInt(TFTransito.getText());
-        if(!VerificaEntrada(numero)){
-            JOptionPane.showMessageDialog(this, "Entrada inválida, O número deve estar entre 0 e 3!");
+        try {
+            int numero = Integer.parseInt(TFTransito.getText());
+            if(!VerificaEntrada(numero)){
+                JOptionPane.showMessageDialog(this, "Entrada inválida, O número deve estar entre 0 e 3!");
+               }
+            else{
+                atualizaEPW(numero, 4);
+            }
         }
-        else{
-            atualizaEPW(numero, 4);
+        catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Entrada inválida!");
         }
     }//GEN-LAST:event_TFTransitoFocusLost
 
     private void TFDeitadoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TFDeitadoFocusLost
-        int numero = Integer.parseInt(TFDeitado.getText());
-        if(!VerificaEntrada(numero)){
-            JOptionPane.showMessageDialog(this, "Entrada inválida, O número deve estar entre 0 e 3!");
+        try {
+            int numero = Integer.parseInt(TFDeitado.getText());
+            if(!VerificaEntrada(numero)){
+                JOptionPane.showMessageDialog(this, "Entrada inválida, O número deve estar entre 0 e 3!");
+               }
+            else{
+                atualizaEPW(numero, 5);
         }
-        else{
-            atualizaEPW(numero, 5);
+        
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Entrada inválida!");
         }
     }//GEN-LAST:event_TFDeitadoFocusLost
 
     private void TFConversandoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TFConversandoFocusLost
-        int numero = Integer.parseInt(TFConversando.getText());
-        if(!VerificaEntrada(numero)){
-            JOptionPane.showMessageDialog(this, "Entrada inválida, O número deve estar entre 0 e 3!");
+        try {
+            int numero = Integer.parseInt(TFConversando.getText());
+            if(!VerificaEntrada(numero)){
+                JOptionPane.showMessageDialog(this, "Entrada inválida, O número deve estar entre 0 e 3!");
+               }
+            else{
+                atualizaEPW(numero, 6);
         }
-        else{
-            atualizaEPW(numero, 6);
+        
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Entrada inválida!");
         }
     }//GEN-LAST:event_TFConversandoFocusLost
 
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         this.dispose();
+        TelaAnterior.AtualizaEPW(EPWfinal);
         TelaAnterior.setEnabled(true);
         TelaAnterior.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
