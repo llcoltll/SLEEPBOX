@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
  * @author Diéferson
  */
 public class EPWORTH extends javax.swing.JFrame {
-    private int[] EPWorth;
+    private int[] EPWorth;  
     private int EPWfinal;
     private FclinicaGUI TelaAnterior;
     /**
